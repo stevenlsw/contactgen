@@ -234,51 +234,543 @@
           </div>
   
         </div>
+      </div>
+    </div>
+  </div>
+  </section>
+    
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Generative Contact Modeling</h2>
+            <div class="content has-text-justified">
+              <p>
+                Conditioned on the input object point cloud, 
+                we decompose the joint distribution of <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> into three conditional probabilities by a sequential CVAE.
+                The contact map is conditioned on object input; the part map is additionally conditioned on contact map; 
+                direction map additionally conditioned on part map. Each component is controlled by a latent code.
+              </p>
 
+              <div class="columns is-centered">
+                <video id="main" autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/framework.mp4" type="video/mp4" />
+                </video>
+              </div>
 
-        <h2 class="title is-3">Generative Contact Modeling</h2>
-        <div class="content has-text-justified">
-          <p>
-            Conditioned on the input object point cloud, 
-            we decompose the joint distribution of <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> into three conditional probabilities by a sequential CVAE.
-            The contact map is conditioned on object input; the part map is additionally conditioned on contact map; 
-            direction map additionally conditioned on part map. Each component is controlled by a latent code.
-          </p>
-
-          <div class="columns is-centered">
-            <video id="main" autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/framework.mp4" type="video/mp4" />
-            </video>
           </div>
-
         </div>
-        <br>
-
+      </div>
+    </div>
+  </section>
+        
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
         <h2 class="title is-3">Model-based contact solver</h2>
           
-        <div class="columns is-centered">
-          <div class="column has-text-justified is-two-fifths">
-            <p>
-              Given the sampled obejct-centric <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> from the generative model, 
-              we decode it into the corresponding hand grasp. 
-              To achieve this, we convert the MANO model into a piecewise SDF model to enhance the compatibility with 
-              the proposed <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> for grasp synthesis, 
-              formulate a model-based optimization to infer the pose and shape of the hand.
-            </p> 
+          <div class="columns is-centered">
+            <div class="column has-text-justified is-two-fifths">
+              <p>
+                Given the sampled obejct-centric <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> from the generative model, 
+                we decode it into the corresponding hand grasp. 
+                To achieve this, we convert the MANO model into a piecewise SDF model to enhance the compatibility with 
+                the proposed <span style="color: rgb(125, 0, 255);font-weight: bolder;">ContactGen</span> for grasp synthesis, 
+                formulate a model-based optimization to infer the pose and shape of the hand.
+              </p> 
+            </div>
+            <div class="column is-two-fifths">
+                <video id="main" autoplay controls muted loop playsinline width="60%">
+                  <source src="static/videos/hand_model.mp4" type="video/mp4" />
+                </video>
+              <h2 class="title is-6">Piecewise hand SDF model</h2>
+            </div>
           </div>
-          <div class="column is-two-fifths">
-              <video id="main" autoplay controls muted loop playsinline width="50%">
-                <source src="static/videos/hand_model.mp4" type="video/mp4" />
-              </video>
-            <h2 class="title is-6">Piecewise hand SDF model</h2>
-          </div>
-        </div>
 
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Grasp synthesis results</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4">Mug</h2>    
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-2">
+      <!-- <h2 class="title is-4">Sample-1</h2> -->
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/mug/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <!-- <h2 class="title is-4">Sample-2</h2> -->
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/mug/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <!-- <h2 class="title is-4">Sample-3</h2> -->
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/mug/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <!-- <h2 class="title is-4">Sample-4</h2> -->
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/mug/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4">Camera</h2>    
+  </div>
 
-</section>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/camera/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/camera/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/camera/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/camera/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4">Fryingpan</h2>    
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/fryingpan/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/fryingpan/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/fryingpan/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/fryingpan/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <details>
+      <summary class="title is-5 button">Click here for more results</summary>
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-4">Wineglass</h2>    
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/wineglass/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/wineglass/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/wineglass/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/wineglass/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-4">Toothpaste</h2>    
+      </div>
+  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/toothpaste/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/toothpaste/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/toothpaste/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/toothpaste/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-4">Binoculars</h2>    
+      </div>
+  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/binoculars/ours_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/binoculars/ours_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/binoculars/ours_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-2">
+          <div class="columns is-centered">
+            <div class="column content">
+              <model-viewer bounds="tight" enable-pan="" src="static/3d/grab/binoculars/ours_3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Grasp diversity decomposition</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4"><span style="color: rgb(255, 0, 0);font-weight: bolder;">Fix</span>: none; <span style="color: rgb(0, 0, 255);font-weight: bolder;">Random sample</span>: contact, part and direction codes</h2>    
+  </div>
+  <br>
+
+  <div class="columns is-centered has-text-centered">
+    
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-6">Reference</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/select_grasp.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-6">Sample-1</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/free/grasp_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-6">Sample-2</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/free/grasp_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-6">Sample-3</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/free/grasp_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4"><span style="color: rgb(255, 0, 0);font-weight: bolder;">Fix</span>: contact code; <span style="color: rgb(0, 0, 255);font-weight: bolder;">Random sample</span>: part and direction codes</h2>    
+  </div>
+  <br>
+
+  <div class="columns is-centered has-text-centered">
+    
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/select_grasp.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_contact/grasp_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_contact/grasp_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_contact/grasp_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="column is-centered has-text-centered">
+    <h2 class="title is-4"><span style="color: rgb(255, 0, 0);font-weight: bolder;">Fix</span>: contact and part code; <span style="color: rgb(0, 0, 255);font-weight: bolder;">Random sample</span>: direction codes</h2>    
+  </div>
+  <br>
+
+  <div class="columns is-centered has-text-centered">
+    
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/select_grasp.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_part_contact/grasp_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_part_contact/grasp_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/diverse_decompose/toothpaste/freeze_part_contact/grasp_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Out-of-domain objects generalization</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="columns is-centered has-text-centered">
+    
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Meat Can</h2>  
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/ho3d/ours_meat_can.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Scissors</h2>  
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/ho3d/ours_scissors.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Mustard bottle</h2>  
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/ho3d/ours_mustard_bottle.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Power drill</h2>  
+          <model-viewer bounds="tight" enable-pan="" src="static/3d/ho3d/ours_power_drill.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 
 
@@ -293,7 +785,6 @@
       booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
       year={2023}
     }
-}
 </code></pre>
   </div>
 </section>
@@ -310,6 +801,7 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
+
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
