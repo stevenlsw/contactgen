@@ -1,0 +1,26 @@
+# dataloader
+dataset: grab
+n_samples: 2048
+batch_size: 128
+n_workers: 8
+# train
+base_lr: 0.0008
+kl_coef: 0.05
+reg_coef: 0.0005
+log_every_epoch: 100
+snapshot_every_epoch: 1000
+n_epochs: 3000
+robustkl: True
+# network
+latentD: 16
+n_neurons: 256
+dropout: 0.1
+obj_feature: 6
+pointnet_hc: 64
+
+# other
+dataset_dir: null
+work_dir: null
+checkpoint: null
+cuda_id: 0
+seed: 4815

@@ -1,0 +1,32 @@
+model_params:
+  activation: igr
+  beta: 100
+  dims:
+  - 64
+  - 64
+  - 64
+  - 64
+  dropout_layers: []
+  dropout_prob: 0.0
+  fft: true
+  fft_dim: 10
+  fft_progressive_factor: 5.0
+  final_out_dim: 1
+  geometric_init: true
+  groups: 1
+  init_std: 1.0e-06
+  latent_dropout: false
+  latent_in: []
+  latent_size: 42
+  norm_layers:
+  - 0
+  - 1
+  - 2
+  - 3
+  normalization: weight
+  query_dim: 3
+  query_in_all: false
+  radius_init: 0.25
+  residual: false
+pose_size: 32
+
