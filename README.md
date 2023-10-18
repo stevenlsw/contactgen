@@ -99,7 +99,6 @@ If you find our work useful in your research, please cite:
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   year={2023}
 }
-}
 ```
 
 ## Acknowledges
