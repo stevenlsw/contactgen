@@ -1,0 +1,8 @@
+numpy==1.21.5
+trimesh==3.9.8
+omegaconf
+chumpy
+tensorboardX
+kornia
+opencv-python==4.5.5.64
+open3d
